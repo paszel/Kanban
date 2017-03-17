@@ -1,0 +1,75 @@
+﻿@model Kanban.Models.TaskSet
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>TaskSet</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" id="editButton" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $('#editButton').click(function (e) {
+            console.log('edit!');
+            e.preventDefault();
+
+            var data = {
+                Id: $('#Id').val(),
+                Name: $('#Name').val()
+            };
+
+            var url = '/api/TaskSetsApi'
+
+            $.ajax({
+                url: url,
+                type: 'PUT',
+                success: function (result) {
+                    console.log('put');
+                },
+                error: function(err)
+                {
+                    //debugger;
+                    console.log('error: ' + err);
+                },
+                dataType: 'json',
+                data: JSON.stringify(data)
+            });
+
+            //$.put(url, data, function () { console.log('put');}, 'json');
+
+        })
+    </script>
+
+}
