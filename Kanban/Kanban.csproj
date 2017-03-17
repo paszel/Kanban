@@ -207,6 +207,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CardsApiController.cs" />
+    <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TaskSetsController.cs" />
     <Compile Include="Controllers\TaskSetsApiController.cs" />
@@ -295,6 +297,11 @@
     <Content Include="Views\TaskSets\Edit.cshtml" />
     <Content Include="Views\TaskSets\Index.cshtml" />
     <Content Include="Views\Home\Kanban.cshtml" />
+    <Content Include="Views\Cards\Create.cshtml" />
+    <Content Include="Views\Cards\Delete.cshtml" />
+    <Content Include="Views\Cards\Details.cshtml" />
+    <Content Include="Views\Cards\Edit.cshtml" />
+    <Content Include="Views\Cards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
