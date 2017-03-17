@@ -240,6 +240,7 @@
     <Content Include="Images\flash-1455285_640.jpg" />
     <Content Include="Images\simple-kanban.jpg" />
     <Content Include="Images\sun-115448_640.jpg" />
+    <Content Include="Images\yellow.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -293,6 +294,7 @@
     <Content Include="Views\TaskSets\Details.cshtml" />
     <Content Include="Views\TaskSets\Edit.cshtml" />
     <Content Include="Views\TaskSets\Index.cshtml" />
+    <Content Include="Views\Home\Kanban.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

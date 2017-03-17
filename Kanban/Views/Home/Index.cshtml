@@ -2,7 +2,6 @@
 </div>
 <div class="row" ng-controller="AppCtrl">
     <div class="col-md-12">
-
         <div class="jumbotron">
             <h1>Hello {{name || "World!"}}</h1>
             <div class="form-group">
@@ -14,8 +13,6 @@
     <div class="col-md-12">
         <div class="form-horizontal hidden-xs">
             <fieldset>
-
-
                 <!-- change col-sm-N to reflect how you would like your column spacing (http://getbootstrap.com/css/#forms-control-sizes) -->
                 <!-- Form Name -->
                 <legend>Personal Data</legend>
@@ -110,40 +107,24 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" bs-tooltip="myTooltip">Strap</h3>
+                    </div>
+                    <div class="panel-body">
+                     <button class="btn btn-danger" bs-modal="modal" data-animation="am-fade-and-scale">Show modal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts
 {
     <script>
-        cont = [
-        {
-            name: 'Jan',
-            lastName: 'Kowalski',
-            job: 'IT'
-        },
-        {
-            name: 'Janina',
-            lastName: 'Kowalska',
-            job: 'Menago.Corp'
-        },
-        {
-            name: 'Tomak',
-            lastName: 'Nowak',
-            job: 'BI COO'
-        },
-        {
-            name: 'Kamil',
-            lastName: 'Malinowski',
-            job: 'Asembler Developer'
-        },
-        {
-            name: 'Ola',
-            lastName: 'Kowalska',
-            job: 'HR'
-        }
-        ];
-
         $(function () {
             $("#grid").kendoGrid({
                 sortable: true,

@@ -1,4 +1,4 @@
-﻿var app = angular.module("App", ['ngRoute', 'mgcrea.ngStrap']);
+﻿var app = angular.module("App", ['ngRoute', 'mgcrea.ngStrap','ngAnimate']);
 app.config(function ($routeProvider) {
         $routeProvider
             .when("/index", {
@@ -21,4 +21,13 @@ app.controller("AppCtrl", function($scope) {
         //console.log($scope.isHidden);
         $scope.isHidden = !$scope.isHidden;
     };
+
+    $scope.modal = {
+        title: 'My modal window',
+        content: 'Some lazy looking content'
+    };
+
+    $scope.myTooltip = {
+        title: 'Tooltip (WOW)'
+    }
 });

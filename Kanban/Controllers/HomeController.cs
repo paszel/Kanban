@@ -12,6 +12,13 @@ namespace Kanban.Controllers
         {
             ViewBag.Title = "Home Page";
 
+            //return View();
+            return RedirectToAction("Kanban");
+        }
+
+        public ActionResult Kanban()
+        {
+            ViewBag.Title = "Kanban";
             return View();
         }
     }
